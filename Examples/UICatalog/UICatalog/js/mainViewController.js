@@ -1,11 +1,12 @@
 var ButtonsViewController = JSB.require('buttonsViewController');
-var ControlsViewController = JSB.require('controlsViewController');
-var TwitterViewController = JSB.require('twitterViewController');
-var CollectionViewController = JSB.require('collectionViewController');
-var WebViewController = JSB.require('webViewController');
-var MapViewController = JSB.require('mapViewController');
-var GestureViewController = JSB.require('gestureViewController');
-var GradientViewController = JSB.require('gradientViewController');
+//var ControlsViewController = JSB.require('controlsViewController');
+//var TwitterViewController = JSB.require('twitterViewController');
+//var CollectionViewController = JSB.require('collectionViewController');
+//var WebViewController = JSB.require('webViewController');
+//var MapViewController = JSB.require('mapViewController');
+//var GestureViewController = JSB.require('gestureViewController');
+//var GradientViewController = JSB.require('gradientViewController');
+
 //var SpritesViewController = JSB.require('spritesViewController');
 
 var MainViewController = JSB.defineClass('MainViewController : UITableViewController', {
@@ -17,18 +18,18 @@ var MainViewController = JSB.defineClass('MainViewController : UITableViewContro
       explanation: 'Various uses of UIButton',
 //      viewController: ButtonsViewController.alloc().initWithStyle(1)
      viewController: create_withStyle('ButtonsViewController',1)
-    },
-    {
-      title: 'Controls',
-      explanation: 'Various uses of UIControl',
-//      viewController: ControlsViewController.alloc().initWithStyle(1)
-     viewController: create_withStyle('ControlsViewController',1)
-    },
-    {
-      title: 'Table View',
-      explanation: 'Use of UITableView',
-//      viewController: TwitterViewController.alloc().init()
-      viewController: TwitterViewController.new()
+//    },
+//    {
+//      title: 'Controls',
+//      explanation: 'Various uses of UIControl',
+////      viewController: ControlsViewController.alloc().initWithStyle(1)
+//     viewController: create_withStyle('ControlsViewController',1)
+//    },
+//    {
+//      title: 'Table View',
+//      explanation: 'Use of UITableView',
+////      viewController: TwitterViewController.alloc().init()
+//      viewController: TwitterViewController.new()
 //    },
 //    {
 //      title: 'Collection View',
@@ -66,9 +67,8 @@ var MainViewController = JSB.defineClass('MainViewController : UITableViewContro
     return self.menuList.length;
   },
   tableViewCellForRowAtIndexPath: function(tableView, indexPath) {
-create_StyleReuseIdentifier
 //    var cell = UITableViewCell.alloc().initWithStyleReuseIdentifier(3, 'Cell');
-    var cell = create_StyleReuseIdentifier('UITableViewCell',3, 'Cell');
+    var cell = create_withStyleReuseIdentifier('UITableViewCell',3, 'Cell');
 
     cell.accessoryType = 1;
     cell.textLabel.text = self.menuList[indexPath.row]['title'];

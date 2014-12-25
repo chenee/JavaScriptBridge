@@ -64,7 +64,7 @@
         return anInstance;
     };
 
-    self[@"create_StyleReuseIdentifier"] = ^(NSString *className,NSInteger styleID,NSString* identifier){
+    self[@"create_withStyleReuseIdentifier"] = ^(NSString *className,NSInteger styleID,NSString* identifier){
         Class aClass = NSClassFromString(className);
         id anInstance;
         anInstance = [[aClass alloc]initWithStyle:styleID reuseIdentifier:identifier];

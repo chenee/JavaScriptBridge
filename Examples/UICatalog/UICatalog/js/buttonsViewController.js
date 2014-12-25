@@ -1,7 +1,8 @@
 var ButtonsViewController = JSB.defineClass('ButtonsViewController : UITableViewController', {
   viewDidLoad: function() {
     self.newButton = function(title, target, selector, frame, image, imagePressed, darkTextColor) {
-      var button = UIButton.alloc().initWithFrame(frame);
+//      var button = UIButton.alloc().initWithFrame(frame);
+      var button = create_withFrame('UIButton',frame);
 
       button.contentVerticalAlignment = 0;
       button.contentHorizontalAlignment = 0;
@@ -79,7 +80,8 @@ var ButtonsViewController = JSB.defineClass('ButtonsViewController : UITableView
   },
   tableViewCellForRowAtIndexPath: function(tableView, indexPath) {
     if (indexPath.row == 0) {
-      var cell = UITableViewCell.alloc().initWithStyleReuseIdentifier(0, 'DisplayCellID');
+//      var cell = UITableViewCell.alloc().initWithStyleReuseIdentifier(0, 'DisplayCellID');
+      var cell = create_withStyleReuseIdentifier('UITableViewCell',0,'DisplayCellID');
       cell.selectionStyle = 0;
 
       var viewToRemove = null;
@@ -101,7 +103,8 @@ var ButtonsViewController = JSB.defineClass('ButtonsViewController : UITableView
 
       return cell;
     } else {
-      var cell = UITableViewCell.alloc().initWithStyleReuseIdentifier(0, 'SourceCellID');
+//      var cell = UITableViewCell.alloc().initWithStyleReuseIdentifier(0, 'SourceCellID');
+      var cell = create_withStyleReuseIdentifier('UITableViewCell',0,'DisplayCellID');
       cell.selectionStyle = 0;
 
       cell.textLabel.opaque = false;
