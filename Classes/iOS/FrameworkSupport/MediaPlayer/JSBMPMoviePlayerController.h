@@ -64,14 +64,14 @@
 
 - (id)initWithContentURL:(NSURL *)url;
 - (void)setFullscreen:(BOOL)fullscreen animated:(BOOL)animated;
-- (UIImage *)thumbnailImageAtTime:(NSTimeInterval)playbackTime timeOption:(MPMovieTimeOption)option;
+//- (UIImage *)thumbnailImageAtTime:(NSTimeInterval)playbackTime timeOption:(MPMovieTimeOption)option;
 - (void)requestThumbnailImagesAtTimes:(NSArray *)playbackTimes timeOption:(MPMovieTimeOption)option;
 - (void)cancelAllThumbnailImageRequests;
 - (NSArray *)timedMetadata;
-- (void)setBackgroundColor:(UIColor *)backgroundColor;
-- (UIColor *)backgroundColor;
-- (void)setMovieControlMode:(MPMovieControlMode)movieControlMode;
-- (MPMovieControlMode)movieControlMode;
+//- (void)setBackgroundColor:(UIColor *)backgroundColor;
+//- (UIColor *)backgroundColor;
+//- (void)setMovieControlMode:(MPMovieControlMode)movieControlMode;
+//- (MPMovieControlMode)movieControlMode;
 
 #pragma clang diagnostic pop
 
