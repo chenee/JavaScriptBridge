@@ -3,7 +3,7 @@ var ControlsViewController = JSB.require('controlsViewController');
 var TwitterViewController = JSB.require('twitterViewController');
 var CollectionViewController = JSB.require('collectionViewController');
 var WebViewController = JSB.require('webViewController');
-//var MapViewController = JSB.require('mapViewController');
+var MapViewController = JSB.require('mapViewController');
 //var GestureViewController = JSB.require('gestureViewController');
 //var GradientViewController = JSB.require('gradientViewController');
 
@@ -45,11 +45,11 @@ var MainViewController = JSB.defineClass('MainViewController : UITableViewContro
       explanation: 'Use of UIWebView',
 //      viewController: WebViewController.alloc().init()
       viewController: WebViewController.new()
-//    },
-//    {
-//      title: 'Map',
-//      explanation: 'Use of MKMapView',
-//      viewController: MapViewController.alloc().init()
+    },
+    {
+      title: 'Map',
+      explanation: 'Use of MKMapView',
+      viewController: MapViewController.new()
 //    },
 //    {
 //      title: 'Gesture',

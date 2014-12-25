@@ -6,7 +6,8 @@ var MapViewController = JSB.defineClass('MapViewController : UIViewController <M
 
     var frame = self.view.frame;
 
-    self.mapView = MKMapView.alloc().initWithFrame(frame);
+//    self.mapView = MKMapView.alloc().initWithFrame(frame);
+    self.mapView = create_withFrame('MKMapView',frame);
     
     self.mapView.backgroundColor = UIColor.whiteColor();
     self.mapView.autoresizingMask = (1 << 1 | 1 << 4 | 1 << 5);
