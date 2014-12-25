@@ -4,7 +4,7 @@ var TwitterViewController = JSB.require('twitterViewController');
 var CollectionViewController = JSB.require('collectionViewController');
 var WebViewController = JSB.require('webViewController');
 var MapViewController = JSB.require('mapViewController');
-//var GestureViewController = JSB.require('gestureViewController');
+var GestureViewController = JSB.require('gestureViewController');
 //var GradientViewController = JSB.require('gradientViewController');
 
 //var SpritesViewController = JSB.require('spritesViewController');
@@ -50,11 +50,11 @@ var MainViewController = JSB.defineClass('MainViewController : UITableViewContro
       title: 'Map',
       explanation: 'Use of MKMapView',
       viewController: MapViewController.new()
-//    },
-//    {
-//      title: 'Gesture',
-//      explanation: 'Use of UIGestureRecognizer',
-//      viewController: GestureViewController.alloc().init()
+    },
+    {
+      title: 'Gesture',
+      explanation: 'Use of UIGestureRecognizer',
+      viewController: GestureViewController.new()
 //    },
 //    {
 //      title: 'Gradient Layer',

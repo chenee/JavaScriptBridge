@@ -3,10 +3,12 @@ var GestureViewController = JSB.defineClass('GestureViewController : UIViewContr
     self.navigationItem.title = 'Gesture';
     self.view.backgroundColor = UIColor.whiteColor();
 
-    var swipeView = UIView.alloc().initWithFrame({x: 10, y: 300, width: 300, height: 120});
+//    var swipeView = UIView.alloc().initWithFrame({x: 10, y: 300, width: 300, height: 120});
+    var swipeView = create_withFrame('UIView',{x: 10, y: 300, width: 300, height: 120});
     swipeView.backgroundColor = UIColor.greenColor();
 
-    var swipeLabel = UILabel.alloc().initWithFrame(swipeView.bounds);
+//    var swipeLabel = UILabel.alloc().initWithFrame(swipeView.bounds);
+    var swipeLabel = create_withFrame('UILabel',swipeView.bounds);
     swipeLabel.text = 'Swipe';
     swipeLabel.textAlignment = 1;
     swipeLabel.textColor = UIColor.whiteColor();
@@ -14,14 +16,17 @@ var GestureViewController = JSB.defineClass('GestureViewController : UIViewContr
 
     self.view.addSubview(swipeView);
 
-    var swipeGestureRecognizer = UISwipeGestureRecognizer.alloc().initWithTargetAction(self, 'handleSwipe:');
+//    var swipeGestureRecognizer = UISwipeGestureRecognizer.alloc().initWithTargetAction(self, 'handleSwipe:');
+    var swipeGestureRecognizer = create_action('UISwipeGestureRecognizer',self, 'handleSwipe:');
     swipeGestureRecognizer.direction = 1 << 0 | 1 << 1;
     swipeView.addGestureRecognizer(swipeGestureRecognizer);
 
-    var tapView = UIView.alloc().initWithFrame({x: 80, y: 100, width: 80, height: 80});
+//    var tapView = UIView.alloc().initWithFrame({x: 80, y: 100, width: 80, height: 80});
+    var tapView = create_withFrame('UIView',{x: 80, y: 100, width: 80, height: 80});
     tapView.backgroundColor = UIColor.redColor();
 
-    var tapLabel = UILabel.alloc().initWithFrame(tapView.bounds);
+//    var tapLabel = UILabel.alloc().initWithFrame(tapView.bounds);
+    var tapLabel = create_withFrame('UILabel',tapView.bounds);
     tapLabel.text = 'Tap';
     tapLabel.textAlignment = 1;
     tapLabel.textColor = UIColor.whiteColor();
@@ -29,13 +34,16 @@ var GestureViewController = JSB.defineClass('GestureViewController : UIViewContr
 
     self.view.addSubview(tapView);
 
-    var tapGestureRecognizer = UITapGestureRecognizer.alloc().initWithTargetAction(self, 'handleTap:');
+//    var tapGestureRecognizer = UITapGestureRecognizer.alloc().initWithTargetAction(self, 'handleTap:');
+    var tapGestureRecognizer = create_action('UITapGestureRecognizer',self, 'handleTap:');
     tapView.addGestureRecognizer(tapGestureRecognizer);
 
-    var panView = UIView.alloc().initWithFrame({x: 180, y: 200, width: 80, height: 80});
+//    var panView = UIView.alloc().initWithFrame({x: 180, y: 200, width: 80, height: 80});
+    var panView = create_withFrame('UIView',{x: 180, y: 200, width: 80, height: 80});
     panView.backgroundColor = UIColor.blueColor();
 
-    var panLabel = UILabel.alloc().initWithFrame(panView.bounds);
+//    var panLabel = UILabel.alloc().initWithFrame(panView.bounds);
+    var panLabel = create_withFrame('UILabel',panView.bounds);
     panLabel.text = 'Pan';
     panLabel.textAlignment = 1;
     panLabel.textColor = UIColor.whiteColor();
@@ -43,7 +51,8 @@ var GestureViewController = JSB.defineClass('GestureViewController : UIViewContr
 
     self.view.addSubview(panView);
 
-    var panGestureRecognizer = UIPanGestureRecognizer.alloc().initWithTargetAction(self, 'handlePan:');
+//    var panGestureRecognizer = UIPanGestureRecognizer.alloc().initWithTargetAction(self, 'handlePan:');
+    var panGestureRecognizer = create_action('UIPanGestureRecognizer',self, 'handlePan:');
     panView.addGestureRecognizer(panGestureRecognizer);
   },
   handleTap: function(sender) {
@@ -60,7 +69,8 @@ var GestureViewController = JSB.defineClass('GestureViewController : UIViewContr
     sender.setTranslationInView({x: 0, y: 0}, sender.view);
   },
   handleSwipe: function(sender) {
-    var label = UILabel.alloc().initWithFrame({x: 0, y: 0, width: 180, height: 60});
+//    var label = UILabel.alloc().initWithFrame({x: 0, y: 0, width: 180, height: 60});
+    var label = create_withFrame('UILabel',{x: 0, y: 0, width: 180, height: 60});
     label.backgroundColor = UIColor.colorWithWhiteAlpha(0.0, 0.5);
     label.center = self.view.center;
     label.alpha = 0.0;

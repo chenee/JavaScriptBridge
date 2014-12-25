@@ -88,6 +88,15 @@
         return obj;
     };
 
+    self[@"create_action"] = ^(NSString*className, id target,NSString* sel){
+
+        Class aClass = NSClassFromString(className);
+        id anInstance;
+        anInstance = [[aClass alloc]initWithTarget:target action:NSSelectorFromString(sel)];
+
+        return anInstance;
+    };
+
 }
 
 @end
