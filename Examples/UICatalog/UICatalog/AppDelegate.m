@@ -24,7 +24,7 @@
     [context addScriptingSupport:@"Social"];
     [context addScriptingSupport:@"MapKit"];
 
-//    [context addScriptingSupport:@"SpriteKit"];
+    [context addScriptingSupport:@"SpriteKit"];
     [context evaluateScript:script];
     
     return YES;

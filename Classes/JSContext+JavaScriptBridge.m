@@ -47,7 +47,13 @@
 
 -(void)addCreator
 {
-    //1 alloc:initWithFrame:
+    self[@"create_withSize"] = ^(NSString *className,CGSize size){
+        Class aClass = NSClassFromString(className);
+        id anInstance;
+        anInstance = [[aClass alloc]initWithSize:size];
+
+        return anInstance;
+    };
     self[@"create_withFrame"] = ^(NSString *className,CGRect bounds){
         Class aClass = NSClassFromString(className);
         id anInstance;

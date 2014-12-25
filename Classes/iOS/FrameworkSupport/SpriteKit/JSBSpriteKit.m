@@ -37,6 +37,13 @@ void set_allowSleep(id self, SEL _cmd, BOOL arg1)
     
 }
 
+void setCollisionBitMask(id self, SEL _cmd, BOOL arg1)
+{
+}
+void setCategoryBitMask(id self, SEL _cmd, BOOL arg1)
+{
+}
+
 @implementation JSBSpriteKit
 
 + (void)addScriptingSupportToContext:(JSContext *)context
@@ -55,7 +62,12 @@ void set_allowSleep(id self, SEL _cmd, BOOL arg1)
     
     types = [NSString stringWithFormat:@"%s%s%s%s", @encode(void), @encode(id), @encode(SEL), @encode(BOOL)];
     result = class_addMethod(metaClass, @selector(set_allowSleep:), (IMP)set_allowSleep, types.UTF8String);
-    
+
+    types = [NSString stringWithFormat:@"%s%s%s", @encode(BOOL), @encode(id), @encode(SEL)];
+    result = class_addMethod(metaClass, @selector(setCollisionBitMask:), (IMP)setCollisionBitMask, types.UTF8String);
+
+    result = class_addMethod(metaClass, @selector(setCategoryBitMask:), (IMP)setCategoryBitMask, types.UTF8String);
+
     class_addProtocol([SKPhysicsBody class], @protocol(JSBSKPhysicsBody));
 //@chenee:002,just ignore now ...
     context[@"SKPhysicsBody"] = [SKPhysicsBody class];

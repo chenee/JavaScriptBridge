@@ -32,13 +32,15 @@ var SpritesViewController = JSB.defineClass('SpritesViewController : UIViewContr
   viewDidLoad: function() {
     self.navigationItem.title = 'Sprite Kit';
 
-    var skView = SKView.alloc().initWithFrame(self.view.bounds);
+//    var skView = SKView.alloc().initWithFrame(self.view.bounds);
+    var skView = create_withFrame('SKView',self.view.bounds);
     skView.showsFPS = true;
     skView.showsNodeCount = true;
 
     self.view.addSubview(skView);
     
-    var scene = MyScene.alloc().initWithSize({width: skView.bounds.width, height: skView.bounds.height});
+//    var scene = MyScene.alloc().initWithSize({width: skView.bounds.width, height: skView.bounds.height});
+    var scene = create_withSize('MyScene',{width: skView.bounds.width, height: skView.bounds.height});
     scene.scaleMode = 1;
     
     skView.presentScene(scene);

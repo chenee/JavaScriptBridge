@@ -7,7 +7,7 @@ var MapViewController = JSB.require('mapViewController');
 var GestureViewController = JSB.require('gestureViewController');
 var GradientViewController = JSB.require('gradientViewController');
 
-//var SpritesViewController = JSB.require('spritesViewController');
+var SpritesViewController = JSB.require('spritesViewController');
 
 var MainViewController = JSB.defineClass('MainViewController : UITableViewController', {
   viewDidLoad: function() {
@@ -60,12 +60,11 @@ var MainViewController = JSB.defineClass('MainViewController : UITableViewContro
       title: 'Gradient Layer',
       explanation: 'Use of CAGradientLayer',
       viewController: GradientViewController.new()
-//    }
-//                     ,
-//    {
-//      title: 'SpriteKit',
-//      explanation: 'Use of SpriteKit',
-//      viewController: SpritesViewController.alloc().init()
+    },
+    {
+      title: 'SpriteKit',
+      explanation: 'Use of SpriteKit',
+      viewController: SpritesViewController.new()
     }]
   },
   tableViewNumberOfRowsInSection: function(tableView, section) {
