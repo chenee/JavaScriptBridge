@@ -14,7 +14,8 @@
 
 + (NSDataDetector *)dataDetectorWithTypes:(NSTextCheckingTypes)checkingTypes error:(NSError **)error;
 
-- (id)initWithTypes:(NSTextCheckingTypes)checkingTypes error:(NSError **)error;
+//@chenee:001
+//- (id)initWithTypes:(NSTextCheckingTypes)checkingTypes error:(NSError **)error;
 
 #pragma clang diagnostic pop
 
