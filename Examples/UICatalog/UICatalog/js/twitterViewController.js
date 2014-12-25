@@ -2,7 +2,10 @@ var TwitterCell = JSB.defineClass('TwitterCell : UITableViewCell', {
   initWithStyleReuseIdentifier: function(style, reuseIdentifier) {
     self.autoresizingMask = (1 << 1 | 1 << 4);
 
-    self.iconImageView = UIImageView.alloc().initWithFrame({x: 8, y: 8, width: 40, height: 40});
+      var frame = {x: 0, y: 5, width: 106, height: 40};
+//    self.iconImageView = UIImageView.alloc().initWithFrame({x: 8, y: 8, width: 40, height: 40});
+    self.iconImageView = create_withFrame('UIImageView',frame);
+
     self.iconImageView.tag = 1;
     self.contentView.addSubview(self.iconImageView);
 
@@ -31,7 +34,9 @@ var TwitterViewController = JSB.defineClass('TwitterViewController : UITableView
   viewDidLoad: function() {
     self.timeline = [];
 
-    self.sizeLabel = UILabel.alloc().initWithFrame({x: 0, y: 0, width: 268, height: 0});
+//    self.sizeLabel = UILabel.alloc().initWithFrame({x: 0, y: 0, width: 268, height: 0});
+    self.sizeLabel = create_withFrame('UILabel',{x: 0, y: 0, width: 268, height: 0});
+
     self.sizeLabel.autoresizingMask = (1 << 1 | 1 << 4);
     self.sizeLabel.font = UIFont.systemFontOfSize(14);
     self.sizeLabel.numberOfLines = -1;
@@ -98,14 +103,14 @@ var TwitterViewController = JSB.defineClass('TwitterViewController : UITableView
   tableViewNumberOfRowsInSection: function(tableView, section) {
     return self.timeline.length;
   },
-  tableViewHeightForRowAtIndexPath: function(tableView, indexPath) {
-    var tweet = self.timeline[indexPath.row];
-
-    self.sizeLabel.text = tweet['text'];
-    var size = self.sizeLabel.sizeThatFits({width: tableView.bounds.width - 66, height: 0});
-
-    return Math.max(size.height + 24, 80);
-  },
+//  tableViewHeightForRowAtIndexPath: function(tableView, indexPath) {
+//    var tweet = self.timeline[indexPath.row];
+//
+//    self.sizeLabel.text = tweet['text'];
+//    var size = self.sizeLabel.sizeThatFits({width: tableView.bounds.width - 66, height: 0});
+//
+//    return Math.max(size.height + 24, 80);
+//  },
   tableViewCellForRowAtIndexPath: function(tableView, indexPath) {
     var cell = tableView.dequeueReusableCellWithIdentifierForIndexPath('Cell', indexPath);
 

@@ -1,8 +1,8 @@
 var ButtonsViewController = JSB.require('buttonsViewController');
 var ControlsViewController = JSB.require('controlsViewController');
-//var TwitterViewController = JSB.require('twitterViewController');
-//var CollectionViewController = JSB.require('collectionViewController');
-//var WebViewController = JSB.require('webViewController');
+var TwitterViewController = JSB.require('twitterViewController');
+var CollectionViewController = JSB.require('collectionViewController');
+var WebViewController = JSB.require('webViewController');
 //var MapViewController = JSB.require('mapViewController');
 //var GestureViewController = JSB.require('gestureViewController');
 //var GradientViewController = JSB.require('gradientViewController');
@@ -12,6 +12,7 @@ var ControlsViewController = JSB.require('controlsViewController');
 var MainViewController = JSB.defineClass('MainViewController : UITableViewController', {
   viewDidLoad: function() {
     self.navigationItem.title = 'UICatalog';
+    var collectionVC = create_collectionVC();
 
     self.menuList = [{
       title: 'Buttons',
@@ -27,22 +28,23 @@ var MainViewController = JSB.defineClass('MainViewController : UITableViewContro
 //      viewController: ControlsViewController.alloc().initWithStyle(1)
 //     viewController: create_withStyle('ControlsViewController',1)
      viewController: ControlsViewController.new()
-//    },
-//    {
-//      title: 'Table View',
-//      explanation: 'Use of UITableView',
-////      viewController: TwitterViewController.alloc().init()
-//      viewController: TwitterViewController.new()
-//    },
-//    {
-//      title: 'Collection View',
-//      explanation: 'Use of UICollectionView',
+    },
+    {
+      title: 'Table View',
+      explanation: 'Use of UITableView',
+      viewController: TwitterViewController.new()
+    },
+    {
+      title: 'Collection View',
+      explanation: 'Use of UICollectionView',
 //      viewController: CollectionViewController.alloc().initWithCollectionViewLayout(UICollectionViewFlowLayout.new())
-//    },
-//    {
-//      title: 'Web',
-//      explanation: 'Use of UIWebView',
+      viewController: collectionVC
+    },
+    {
+      title: 'Web',
+      explanation: 'Use of UIWebView',
 //      viewController: WebViewController.alloc().init()
+      viewController: WebViewController.new()
 //    },
 //    {
 //      title: 'Map',

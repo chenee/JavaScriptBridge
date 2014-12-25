@@ -80,6 +80,13 @@
 
         return alert;
     };
+    self[@"create_collectionVC"] = ^(){
+        UICollectionViewFlowLayout * flow = [[UICollectionViewFlowLayout alloc]init];
+
+        UICollectionViewController * obj = [[UICollectionViewController alloc]initWithCollectionViewLayout:flow];
+
+        return obj;
+    };
 
 }
 

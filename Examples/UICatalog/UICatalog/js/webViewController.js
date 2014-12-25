@@ -6,7 +6,10 @@ var WebViewController = JSB.defineClass('WebViewController : UIViewController <U
 
     var textFieldFrame = {x: 20, y: 6, width: self.view.bounds.width - (20 * 2), height: 30};
 
-    var urlField = UITextField.alloc().initWithFrame(textFieldFrame);
+//    var urlField = UITextField.alloc().initWithFrame(textFieldFrame);
+
+    var urlField = create_withFrame('UITextField',textFieldFrame);
+
     urlField.borderStyle = 2;
     urlField.textColor = UIColor.blackColor();
     urlField.delegate = self;
@@ -25,7 +28,8 @@ var WebViewController = JSB.defineClass('WebViewController : UIViewController <U
     webFrame.y += (6 * 2) + 30;
     webFrame.height -= 40;
 
-    self.webView = UIWebView.alloc().initWithFrame(webFrame);
+//    self.webView = UIWebView.alloc().initWithFrame(webFrame);
+    self.webView = create_withFrame('UIWebView',webFrame);
     
     self.webView.backgroundColor = UIColor.whiteColor();
     self.webView.scalesPageToFit = true;
