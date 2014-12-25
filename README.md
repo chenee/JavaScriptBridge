@@ -1,3 +1,6 @@
+fix the build and made it usable,for 7.0,8.1.2 ... 
+
+
 # JavaScriptBridge ![License MIT](https://go-shields.herokuapp.com/license-MIT-yellow.png) 
 
 [![Version](https://cocoapod-badges.herokuapp.com/v/JavaScriptBridge/badge.png)](https://cocoapod-badges.herokuapp.com/v/JavaScriptBridge/badge.png)
