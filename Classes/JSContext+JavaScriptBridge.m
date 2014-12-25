@@ -9,6 +9,9 @@
 #import "JSContext+JavaScriptBridge.h"
 #import "JSBScriptingSupport+Private.h"
 
+#import <SpriteKit/SKLabelNode.h>
+#import <SpriteKit/SKSpriteNode.h>
+
 @implementation JSContext (JavaScriptBridge)
 
 - (void)addScriptingSupport:(NSString *)framework
@@ -99,6 +102,27 @@
         Class aClass = NSClassFromString(className);
         id anInstance;
         anInstance = [[aClass alloc]initWithTarget:target action:NSSelectorFromString(sel)];
+
+        return anInstance;
+    };
+
+
+    //=======
+    self[@"create_SKLabelNode_withFont"] = ^(NSString*className, NSString* fontName){
+
+        Class aClass = NSClassFromString(className);
+        id anInstance;
+//        anInstance = [SKLabelNode labelNodeWithFontNamed:fontName];
+        anInstance = [aClass labelNodeWithFontNamed:fontName];
+
+        return anInstance;
+    };
+
+    self[@"create_SKSpriteNode_withImg"] = ^(NSString*className, NSString* imgName){
+
+        Class aClass = NSClassFromString(className);
+        id anInstance;
+        anInstance = [aClass spriteNodeWithImageNamed:imgName];
 
         return anInstance;
     };
