@@ -15,7 +15,8 @@
 
 @property (nonatomic, readonly) NSString *countryCode;
 
-- (id)initWithCoordinate:(CLLocationCoordinate2D)coordinate addressDictionary:(NSDictionary *)addressDictionary;
+//@chenee:001
+//- (id)initWithCoordinate:(CLLocationCoordinate2D)coordinate addressDictionary:(NSDictionary *)addressDictionary;
 
 #pragma clang diagnostic pop
 

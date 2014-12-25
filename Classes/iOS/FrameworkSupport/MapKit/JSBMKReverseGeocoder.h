@@ -19,7 +19,8 @@
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 @property (nonatomic, readonly) MKPlacemark *placemark;
 
-- (id)initWithCoordinate:(CLLocationCoordinate2D)coordinate;
+//@chenee:001
+//- (id)initWithCoordinate:(CLLocationCoordinate2D)coordinate;
 - (void)start;
 - (void)cancel;
 
