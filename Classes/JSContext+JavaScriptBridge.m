@@ -71,6 +71,16 @@
 
         return anInstance;
     };
+
+    self[@"create_alert"] = ^(NSString *title,NSString* msg,NSString* cancel,NSString* ok){
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:title
+                                                       message:msg
+                                                      delegate:nil
+                                             cancelButtonTitle:cancel otherButtonTitles:ok, nil];
+
+        return alert;
+    };
+
 }
 
 @end

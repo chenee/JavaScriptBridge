@@ -75,6 +75,7 @@ var ButtonsViewController = JSB.defineClass('ButtonsViewController : UITableView
   tableViewTitleForHeaderInSection: function(tableView, section) {
     return self.dataSourceArray[section]['sectionTitleKey'];
   },
+//@chenee:003 tmp comment!!
 //  tableViewHeightForRowAtIndexPath: function(tableView, indexPath) {
 //    return (indexPath.row == 0) ? 50 : 38;
 //  },
@@ -119,7 +120,8 @@ var ButtonsViewController = JSB.defineClass('ButtonsViewController : UITableView
     }
   },
   action: function(sender) {
-    var alertView = UIAlertView.alloc().initWithTitleMessageDelegateCancelButtonTitleOtherButtonTitles('Alert', 'Button pushed.', null, 'Cancel', ['OK']);
+//    var alertView = UIAlertView.alloc().initWithTitleMessageDelegateCancelButtonTitleOtherButtonTitles('Alert', 'Button pushed.', null, 'Cancel', ['OK']);
+    var alertView = create_alert('Alert', 'Button pushed.', 'Cancel', 'OK');
     alertView.show();
   }
 });
