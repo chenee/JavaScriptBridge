@@ -23,7 +23,9 @@ var GradientViewController = JSB.defineClass('GradientViewController : UIViewCon
   viewDidLoad: function() {
     self.navigationItem.title = 'Gradient Layer';
 
-    var gradientView = GradientView.alloc().initWithFrame(self.view.bounds);
+//    var gradientView = GradientView.alloc().initWithFrame(self.view.bounds);
+    var gradientView = create_withFrame('GradientView',self.view.bounds);
+
     self.view.addSubview(gradientView);
   }
 });

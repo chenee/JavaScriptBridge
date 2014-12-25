@@ -5,7 +5,7 @@ var CollectionViewController = JSB.require('collectionViewController');
 var WebViewController = JSB.require('webViewController');
 var MapViewController = JSB.require('mapViewController');
 var GestureViewController = JSB.require('gestureViewController');
-//var GradientViewController = JSB.require('gradientViewController');
+var GradientViewController = JSB.require('gradientViewController');
 
 //var SpritesViewController = JSB.require('spritesViewController');
 
@@ -55,11 +55,11 @@ var MainViewController = JSB.defineClass('MainViewController : UITableViewContro
       title: 'Gesture',
       explanation: 'Use of UIGestureRecognizer',
       viewController: GestureViewController.new()
-//    },
-//    {
-//      title: 'Gradient Layer',
-//      explanation: 'Use of CAGradientLayer',
-//      viewController: GradientViewController.alloc().init()
+    },
+    {
+      title: 'Gradient Layer',
+      explanation: 'Use of CAGradientLayer',
+      viewController: GradientViewController.new()
 //    }
 //                     ,
 //    {
