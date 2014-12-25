@@ -1,5 +1,5 @@
-//var MainViewController = JSB.require('mainViewController');
-var ButtonsViewController = JSB.require('buttonsViewController');
+var MainViewController = JSB.require('mainViewController');
+//var ButtonsViewController = JSB.require('buttonsViewController');
 
 var bounds = UIScreen.mainScreen().bounds;
 
@@ -11,8 +11,8 @@ window.backgroundColor = UIColor.redColor();
 
 var navigationController = UINavigationController.new();
 
-//var mainViewController = MainViewController.new();
-var mainViewController = ButtonsViewController.new();
+var mainViewController = MainViewController.new();
+//var mainViewController = ButtonsViewController.new();
 navigationController.viewControllers = [mainViewController];
 
 window.rootViewController = navigationController;

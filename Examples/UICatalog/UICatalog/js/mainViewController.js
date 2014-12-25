@@ -17,7 +17,9 @@ var MainViewController = JSB.defineClass('MainViewController : UITableViewContro
       title: 'Buttons',
       explanation: 'Various uses of UIButton',
 //      viewController: ButtonsViewController.alloc().initWithStyle(1)
-     viewController: create_withStyle('ButtonsViewController',1)
+//     viewController: create_withStyle('ButtonsViewController',1)
+     viewController: ButtonsViewController.new()
+
 //    },
 //    {
 //      title: 'Controls',

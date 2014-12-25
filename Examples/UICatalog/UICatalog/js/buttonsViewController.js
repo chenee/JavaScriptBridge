@@ -75,9 +75,9 @@ var ButtonsViewController = JSB.defineClass('ButtonsViewController : UITableView
   tableViewTitleForHeaderInSection: function(tableView, section) {
     return self.dataSourceArray[section]['sectionTitleKey'];
   },
-  tableViewHeightForRowAtIndexPath: function(tableView, indexPath) {
-    return (indexPath.row == 0) ? 50 : 38;
-  },
+//  tableViewHeightForRowAtIndexPath: function(tableView, indexPath) {
+//    return (indexPath.row == 0) ? 50 : 38;
+//  },
   tableViewCellForRowAtIndexPath: function(tableView, indexPath) {
     if (indexPath.row == 0) {
 //      var cell = UITableViewCell.alloc().initWithStyleReuseIdentifier(0, 'DisplayCellID');
