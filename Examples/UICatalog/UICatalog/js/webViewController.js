@@ -31,7 +31,8 @@ var WebViewController = JSB.defineClass('WebViewController : UIViewController <U
 //    self.webView = UIWebView.alloc().initWithFrame(webFrame);
     self.webView = create_withFrame('UIWebView',webFrame);
     
-    self.webView.backgroundColor = UIColor.whiteColor();
+//    self.webView.backgroundColor = UIColor.whiteColor();
+    self.webView.backgroundColor = UIColor.grayColor();
     self.webView.scalesPageToFit = true;
     self.webView.autoresizingMask = (1 << 1 | 1 << 4 | 1 << 5);
     self.webView.delegate = self;
