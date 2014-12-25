@@ -1,5 +1,5 @@
 var ButtonsViewController = JSB.require('buttonsViewController');
-//var ControlsViewController = JSB.require('controlsViewController');
+var ControlsViewController = JSB.require('controlsViewController');
 //var TwitterViewController = JSB.require('twitterViewController');
 //var CollectionViewController = JSB.require('collectionViewController');
 //var WebViewController = JSB.require('webViewController');
@@ -20,12 +20,13 @@ var MainViewController = JSB.defineClass('MainViewController : UITableViewContro
 //     viewController: create_withStyle('ButtonsViewController',1)
      viewController: ButtonsViewController.new()
 
-//    },
-//    {
-//      title: 'Controls',
-//      explanation: 'Various uses of UIControl',
-////      viewController: ControlsViewController.alloc().initWithStyle(1)
+    },
+    {
+      title: 'Controls',
+      explanation: 'Various uses of UIControl',
+//      viewController: ControlsViewController.alloc().initWithStyle(1)
 //     viewController: create_withStyle('ControlsViewController',1)
+     viewController: ControlsViewController.new()
 //    },
 //    {
 //      title: 'Table View',
