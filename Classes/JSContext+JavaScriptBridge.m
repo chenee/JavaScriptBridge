@@ -45,4 +45,32 @@
     }
 }
 
+-(void)addCreator
+{
+    //1 alloc:initWithFrame:
+    self[@"create_withFrame"] = ^(NSString *className,CGRect bounds){
+        Class aClass = NSClassFromString(className);
+        id anInstance;
+        anInstance = [[aClass alloc]initWithFrame:bounds];
+
+        return anInstance;
+    };
+
+    self[@"create_withStyle"] = ^(NSString *className,NSInteger styleID){
+        Class aClass = NSClassFromString(className);
+        id anInstance;
+        anInstance = [[aClass alloc]initWithStyle:styleID];
+
+        return anInstance;
+    };
+
+    self[@"create_StyleReuseIdentifier"] = ^(NSString *className,NSInteger styleID,NSString* identifier){
+        Class aClass = NSClassFromString(className);
+        id anInstance;
+        anInstance = [[aClass alloc]initWithStyle:styleID reuseIdentifier:identifier];
+
+        return anInstance;
+    };
+}
+
 @end

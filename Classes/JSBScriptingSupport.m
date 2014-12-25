@@ -26,7 +26,8 @@
         globalContext.exceptionHandler = ^(JSContext *context, JSValue *value) {
             NSLog(@"%@", value);
         };
-        
+
+        [globalContext addCreator];
         [globalContext addScriptingSupport:@"Foundation"];
         [globalContext addScriptingSupport:@"UIKit"];
         [globalContext addScriptingSupport:@"QuartzCore"];

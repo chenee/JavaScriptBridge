@@ -11,5 +11,6 @@
 @interface JSContext (JavaScriptBridge)
 
 - (void)addScriptingSupport:(NSString *)framework;
+-(void)addCreator;
 
 @end

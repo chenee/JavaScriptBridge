@@ -1,6 +1,8 @@
 var MainViewController = JSB.require('mainViewController');
 
-var window = UIWindow.alloc().initWithFrame(UIScreen.mainScreen().bounds);
+var bounds = UIScreen.mainScreen().bounds;
+//var window = UIWindow.alloc().initWithFrame(bounds);
+var window = create_withFrame('UIWindow',bounds);
 window.backgroundColor = UIColor.whiteColor();
 
 var navigationController = UINavigationController.new();

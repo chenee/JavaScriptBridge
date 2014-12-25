@@ -57,6 +57,7 @@ void set_allowSleep(id self, SEL _cmd, BOOL arg1)
     result = class_addMethod(metaClass, @selector(set_allowSleep:), (IMP)set_allowSleep, types.UTF8String);
     
     class_addProtocol([SKPhysicsBody class], @protocol(JSBSKPhysicsBody));
+//@chenee:002,just ignore now ...
     context[@"SKPhysicsBody"] = [SKPhysicsBody class];
     
     class_addProtocol([SKAction class], @protocol(JSBSKAction));
