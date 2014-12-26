@@ -13,18 +13,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
     NSBundle *mainBundle = [NSBundle mainBundle];
     NSString *path = [mainBundle pathForResource:@"main" ofType:@"js"];
     
     NSString *script = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
     
     JSContext *context = [JSBScriptingSupport globalContext];
+
     [context addScriptingSupport:@"AssetsLibrary"];
     [context addScriptingSupport:@"Accounts"];
     [context addScriptingSupport:@"Social"];
     [context addScriptingSupport:@"MapKit"];
 
     [context addScriptingSupport:@"SpriteKit"];
+
+    //dirty fix webview bug;
+    UIWebView* myWebView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
+    context[@"myWebView"] = myWebView;
+
+
     [context evaluateScript:script];
     
     return YES;
